@@ -6,13 +6,13 @@ export async function up(knex: Knex ) {
         table.increments('id').primary();
 
         table.integer('pontos_id')
-        .notNullable()
+        .nullable()
         .references('id')
         .inTable('pontos')
         ;
 
         table.integer('items_id')
-        .notNullable()
+        .nullable()
         .references('id')
         .inTable('items')
         ;

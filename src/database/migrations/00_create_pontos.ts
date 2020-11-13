@@ -4,14 +4,14 @@ export async function up(knex: Knex ) {
     return knex.schema.createTable('pontos', table => {
 
         table.increments('id').primary();
-        table.string('image').notNullable();
-        table.string('nome').notNullable();
-        table.string('email').notNullable();
-        table.string('whatsapp').notNullable();
-        table.decimal('lagitude').notNullable();
-        table.decimal('longitude').notNullable();
-        table.string('cidade').notNullable();
-        table.string('uf', 2).notNullable();
+        table.string('image').nullable();
+        table.string('nome').nullable();
+        table.string('email').nullable();
+        table.string('whatsapp').nullable();
+        table.decimal('lagitude').nullable();
+        table.decimal('longitude').nullable();
+        table.string('cidade').nullable();
+        table.string('uf', 2).nullable();
        
      });
 }
